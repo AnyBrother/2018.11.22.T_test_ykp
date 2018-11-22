@@ -1,0 +1,3 @@
+1. Replace Data in "Data_input.xlsx" file as example,
+2. Run "T_test_ykp.py"code with F5 or button-click,
+3. Output will be shown in code_path+"Y_M_D_H_M_output"¡ª¡ª"Y.M.D.H.M.T_test_output.xlsx".
