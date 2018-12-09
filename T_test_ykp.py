@@ -81,9 +81,9 @@ def significance_ykp( X, case ):
             # print(j,k)
             temp_df = pd.DataFrame()
             locals()["individual_t_test_%s_%s" %(j,k)] = copy.deepcopy( stats.ttest_ind( locals()["X_%s" %(level_list[j])], locals()["X_%s" %(level_list[k])] ) )            
-            locals()["X_%s" %(i)] = copy.deepcopy( X[X.iloc[:,0]==i].iloc[:,1] )
-            rvs  = copy.deepcopy( locals()["X_%s" %(i)] )
-            locals()["Single_test_%s" %(i)] = stats.ttest_1samp(rvs, single_t_test_mean)
+            locals()["X_%s" %(j)] = copy.deepcopy( X[X.iloc[:,0]==i].iloc[:,1] )
+            rvs  = copy.deepcopy( locals()["X_%s" %(j)] )
+            locals()["Single_test_%s" %(j)] = stats.ttest_1samp(rvs, single_t_test_mean)
             
             temp_df[str(columns_list[0])] = [ str(level_list[j])+' & '+str(level_list[k]) ]
             temp_df["Count(Left)"] = [ len(locals()["X_%s" %(level_list[j])]) ]
