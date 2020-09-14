@@ -3,7 +3,7 @@ Deal with One Sample T-test, Independent sample T-test, MHU test, KS test, WWR t
 
 Download:
   Run 
-    "git clone https://github.com/AnyBrother/2018.11.22.T_test_ykp.git" 
+    "git clone https://github.com/AnyBrother/Significance_character_test_ykp.git" 
   in cmd to get the files.
 
 Step:
