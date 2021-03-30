@@ -279,8 +279,10 @@ def creat_filefolds_ykp():
 def main():
     path, path_level_1 = creat_filefolds_ykp()  # 自动获取文件所在路径
     sheetname = "Sheet1"
-    data_in = pd.read_excel(path + 'Data_input.xlsx', sheet_name=sheetname)  # 读取数据(数据要求: 第1列为类别列, 第2列为信用得分)
+    data_in = pd.read_excel(path + 'Data_input1.xlsx', sheet_name=sheetname)  # 读取数据(数据要求: 第1列为类别列, 第2列为信用得分)
     subject = "Economy"
+    data_in["Category"] = [str(x) for x in list(data_in["Category"])]
+    data_in["Value"] = [np.float(x) for x in list(data_in["Value"])]
     results_out = significance_ykp(data_in, subject)  # 得出显著性检验结果
     # 输出Excel结果
     out_sheet_list = ['(1)单样本T检验结果', '(2)独立样本T检验结果', '(3)独立样本T检验的结果矩阵',
